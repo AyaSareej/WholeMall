@@ -1,0 +1,44 @@
+﻿  main.cpp
+C:\Aya\Opengl\include\GLFW\glfw3.h(338,1): warning C4005: 'GLFW_KEY_1': macro redefinition
+  (compiling source file 'main.cpp')
+  C:\Aya\Opengl\include\GLFW\glfw3.h(312,1):
+  see previous definition of 'GLFW_KEY_1'
+  
+C:\Aya\Opengl\Arch.h(67,33): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Aya\Opengl\Cylinder.h(91,50): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.39.33218\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Aya\Opengl\main.cpp(43,22): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(44,20): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(140,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(140,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(141,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(141,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(142,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(142,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(143,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(143,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Aya\Opengl\main.cpp(162,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Aya\Opengl\main.cpp(162,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Aya\Opengl\main.cpp(599,10): warning C4101: 'viewX': unreferenced local variable
+C:\Aya\Opengl\main.cpp(600,10): warning C4101: 'viewZ': unreferenced local variable
+glfw3.lib(init.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(init.obj)' or at ''; linking object as if no debug info
+glfw3.lib(monitor.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(monitor.obj)' or at ''; linking object as if no debug info
+glfw3.lib(window.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(window.obj)' or at ''; linking object as if no debug info
+glfw3.lib(input.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(input.obj)' or at ''; linking object as if no debug info
+glfw3.lib(context.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(context.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_init.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_init.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_monitor.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_time.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_time.obj)' or at ''; linking object as if no debug info
+glfw3.lib(vulkan.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(vulkan.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_window.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_window.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_tls.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_tls.obj)' or at ''; linking object as if no debug info
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_joystick.obj)' or at ''; linking object as if no debug info
+glfw3.lib(wgl_context.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(wgl_context.obj)' or at ''; linking object as if no debug info
+glfw3.lib(egl_context.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(egl_context.obj)' or at ''; linking object as if no debug info
+  DiamondEngine.vcxproj -> C:\Aya\Opengl\x64\Debug\Doraimon.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

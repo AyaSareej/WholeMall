@@ -1,0 +1,1885 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'y'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 3815,
+                  "startColumn": 41,
+                  "endLine": 3815,
+                  "endColumn": 53
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "load_jpeg_image",
+                  "decoratedName": "?load_jpeg_image@@YAPEAEPEAUstbi__jpeg@@PEAH11H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3663,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3663,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3663,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3664,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3667,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3670,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3673,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3675,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3677,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3680,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3684,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3685,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3685,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3686,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3687,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3689,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3691,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3691,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3714,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3715,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3718,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3718,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3719,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3720,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3720,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3734,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3783,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3794,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3805,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3813,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "'y' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3814,
+                            "startColumn": 12
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'n==1')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3815,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3815,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume 'i<z->s->img_x')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 3815,
+                            "startColumn": 48
+                          }
+                        },
+                        "message": {
+                          "text": "'y' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "'realloc' might return null pointer: assigning null pointer to 'out', which is passed as an argument to 'realloc', will cause the original memory block to be leaked."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6707,
+                  "startColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__load_gif_main",
+                  "decoratedName": "?stbi__load_gif_main@@YAPEAXPEAUstbi__context@@PEAPEAHPEAH222H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "'realloc' might return null pointer: assigning null pointer to '*delays', which is passed as an argument to 'realloc', will cause the original memory block to be leaked."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6709,
+                  "startColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__load_gif_main",
+                  "decoratedName": "?stbi__load_gif_main@@YAPEAXPEAUstbi__context@@PEAPEAHPEAH222H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6262",
+          "message": {
+            "text": "Function uses '35012' bytes of stack.  Consider moving some data to heap."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6682,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__load_gif_main",
+                  "decoratedName": "?stbi__load_gif_main@@YAPEAXPEAUstbi__context@@PEAPEAHPEAH222H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'out+((((layers-1))*stride))' could be '0':  this does not adhere to the specification for the function 'memcpy'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6718,
+                  "startColumn": 5,
+                  "endLine": 6718,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__load_gif_main",
+                  "decoratedName": "?stbi__load_gif_main@@YAPEAXPEAUstbi__context@@PEAPEAHPEAH222H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6684,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6685,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6686,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6687,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6688,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6689,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6690,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6691,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6692,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6697,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6698,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6700,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6701,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6702,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6703,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6704,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6706,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6713,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6714,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6718,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6719,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6723,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6727,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6697,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6698,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6700,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6701,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6702,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6703,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6704,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6706,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6707,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "'out' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6708,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'delays' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6718,
+                            "startColumn": 11
+                          }
+                        },
+                        "message": {
+                          "text": "'out' is an In/Out argument to 'memcpy' (declared at c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.39.33218\\include\\vcruntime_string.h:43)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6718,
+                            "startColumn": 11
+                          }
+                        },
+                        "message": {
+                          "text": "'out+((((layers-1))*stride))' should not be NULL, because this is not consistent with the SAL annotation on 'memcpy'"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferencing NULL pointer. '*delays' contains the same NULL value as 'realloc()`6709' did. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6724,
+                  "startColumn": 7,
+                  "endLine": 6724,
+                  "endColumn": 32
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__load_gif_main",
+                  "decoratedName": "?stbi__load_gif_main@@YAPEAXPEAUstbi__context@@PEAPEAHPEAH222H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6684,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6685,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6686,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6687,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6688,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6689,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6690,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6691,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6692,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6693,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6697,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6698,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6700,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6701,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6702,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6703,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6704,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6706,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6713,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6714,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6715,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6718,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6719,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6723,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6724,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6727,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6697,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6698,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6700,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6701,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6702,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6703,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6704,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6706,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6707,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6708,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6709,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "'*delays' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6718,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6719,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'layers>=2')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6720,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6723,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'delays')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                          },
+                          "region": {
+                            "startLine": 6724,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "'*delays' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6262",
+          "message": {
+            "text": "Function uses '34980' bytes of stack.  Consider moving some data to heap."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+                },
+                "region": {
+                  "startLine": 6746,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stbi__gif_load",
+                  "decoratedName": "?stbi__gif_load@@YAPEAXPEAUstbi__context@@PEAH11HPEAUstbi__result_info@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.39.33218.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Aya/Projects/Programming/university/graphics/Doraimon/include/stb_image.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "1a60cbc5621a3cf05d8e3b75df2fe0a9cf221e34fc356f06c8087b85279d411c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/aya/projects/programming/university/graphics/doraimon/stb_image.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "e49af4367e089854ceb4427745a8077f2ae63472fa13835888f64986d03ff503"
+          }
+        }
+      ]
+    }
+  ]
+}
