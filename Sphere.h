@@ -9,6 +9,9 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <glm/glm.hpp> // Include GLM for vector types
+#include <glm/gtc/matrix_transform.hpp> // Include for transformations
+#include <glm/gtc/type_ptr.hpp> // Include for converting glm types to pointers
+
 
 class Sphere
 {
@@ -20,6 +23,7 @@ private:
     GLuint textureID; // Texture ID for the sphere
     glm::vec3 position; // Position of the sphere
     float radius = 1.0f;
+    glm::vec3 scale; // Scale of the sphere
     int sectorCount = 36;
     int stackCount = 18;
 
@@ -125,6 +129,11 @@ public:
         position = glm::vec3(x, y, z);
     }
 
+    // Function to set the scale of the sphere
+    void SetScale(float x, float y, float z) {
+        scale = glm::vec3(x, y, z);
+    }
+
     // Function to get the position of the sphere
     glm::vec3 GetPosition() const {
         return position;
@@ -137,7 +146,7 @@ public:
 
         // Create a model matrix for the sphere
         glm::mat4 model = glm::translate(glm::mat4(1.0f), position); // Translate to the sphere's position
-
+       // model = glm::scale(model, scale);
         // Set the model matrix in the shader
         shader.setMat4("model", model); // Assuming you have a method to set a mat4 in your shader
 

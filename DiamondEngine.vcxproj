@@ -153,14 +153,17 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Model.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="textureLoad.cpp" />
+    <ClCompile Include="ToyStore.cpp" />
     <ClCompile Include="WallWithHole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arch.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CarToy.h" />
     <ClInclude Include="Closet.h" />
     <ClInclude Include="Cylinder.h" />
     <ClInclude Include="Door.h" />
@@ -174,16 +177,23 @@
     <ClInclude Include="LiftRoomDoor.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Table.h" />
+    <ClInclude Include="TeddyBear.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="ToyStore.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
     <ClInclude Include="WallHole.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Light.frag" />
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Light.vert" />
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Material.frag" />
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Material.vert" />
     <None Include="fragment_shader.glsl" />
     <None Include="skybox.fs" />
     <None Include="simpleFS.fs" />

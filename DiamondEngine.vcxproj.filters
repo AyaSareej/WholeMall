@@ -12,6 +12,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Header Files\ToysRoomObjecs">
+      <UniqueIdentifier>{e3704fe6-8df2-4b7e-9033-7b91ec45ce64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\objects">
+      <UniqueIdentifier>{de61a624-d762-4641-8154-d684b2a9046d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Meshes">
+      <UniqueIdentifier>{303315e4-ecc9-4d68-b9fb-97bea6f600fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,15 +56,18 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ToyStore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stb_image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
@@ -70,12 +82,6 @@
     <ClInclude Include="TextureLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cuboid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Door.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -83,18 +89,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DoorWall.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Closet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Drawer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Lift.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Arch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LiftRoomDoor.h">
@@ -115,8 +109,41 @@
     <ClInclude Include="Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TeddyBear.h">
+      <Filter>Header Files\ToysRoomObjecs</Filter>
+    </ClInclude>
+    <ClInclude Include="CarToy.h">
+      <Filter>Header Files\ToysRoomObjecs</Filter>
+    </ClInclude>
+    <ClInclude Include="ToyStore.h">
+      <Filter>Header Files\ToysRoomObjecs</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawer.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Door.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Closet.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
     <ClInclude Include="Cylinder.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Cuboid.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Lift.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Arch.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Header Files\objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +166,18 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="fragment_shader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Light.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Light.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Material.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\Users\Ayoosh\Desktop\Hazel\Hazel\Hazel\assets\shaders\Material.vert">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

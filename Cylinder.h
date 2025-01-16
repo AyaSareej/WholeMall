@@ -35,6 +35,12 @@ public:
         glDeleteBuffers(1, &EBO);
     }
 
+    // Default constructor
+    Cylinder() : radius(1.0f), height(1.0f), sectors(36), position(0.0f), rotation(0.0f), useTexture(false), faceColor(1.0f, 1.0f, 1.0f, 1.0f) {
+        generateVertices();
+        setupBuffers();
+    }
+
     // Constructor to initialize the cylinder dimensions and setup buffers
     Cylinder(float radius, float height, int sectors)
         : radius(radius), height(height), sectors(sectors), position(0.0f), rotation(0.0f), useTexture(false), faceColor(1.0f, 1.0f, 1.0f, 1.0f) {
@@ -43,9 +49,14 @@ public:
     }
 
     // Set the position of the cylinder
+    void SetPosition(const glm::vec3& pos) {
+        position = pos;
+    }
+
     void SetPosition(float x, float y, float z) {
         position = glm::vec3(x, y, z);
     }
+
 
     // Set the rotation of the cylinder
     void SetRotation(float x, float y, float z) {

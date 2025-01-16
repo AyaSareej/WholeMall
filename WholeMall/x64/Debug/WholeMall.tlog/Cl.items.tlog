@@ -5,7 +5,9 @@ C:\Aya\learn\Programming\OpenGL\openGl modern\opengl-tutorials\YoutubeOpenGL 6 -
 C:\Aya\Mall_OpenGL_Project\glad.c;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\glad.obj
 C:\Aya\Mall_OpenGL_Project\main.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\main.obj
 C:\Aya\Mall_OpenGL_Project\Mesh.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\Mesh.obj
+C:\Aya\Mall_OpenGL_Project\Model.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\Model.obj
 C:\Aya\Mall_OpenGL_Project\stb_image.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\stb_image.obj
 C:\Aya\Mall_OpenGL_Project\Texture.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\Texture.obj
 C:\Aya\Mall_OpenGL_Project\textureLoad.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\textureLoad.obj
+C:\Aya\Mall_OpenGL_Project\ToyStore.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\ToyStore.obj
 C:\Aya\Mall_OpenGL_Project\WallWithHole.cpp;C:\Aya\Mall_OpenGL_Project\WholeMall\x64\Debug\WallWithHole.obj
