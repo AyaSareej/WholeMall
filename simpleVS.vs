@@ -8,12 +8,12 @@ out vec3 FragPos; // Pass fragment position to the fragment shader
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
+uniform float textureRepeatX;
+uniform float textureRepeatY;
 
 void main()
 {
-
-    TexCoord = texCoord; // Pass texture coordinates
+    TexCoord = vec2(texCoord.x * textureRepeatX, texCoord.y * textureRepeatY); // Scale texture coordinates
     FragPos = vec3(model * vec4(position, 1.0)); // Calculate world position
-   gl_Position = projection * view * model * vec4(position, 1.0);
-  // gl_Position = projection * view * vec4(FragPos, 1.0);
+    gl_Position = projection * view * model * vec4(position, 1.0);
 }

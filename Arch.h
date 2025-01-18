@@ -12,6 +12,8 @@ private:
         unsigned int textureID;            // Texture ID for this face
         unsigned int indexCount;          // Number of indices for the face
         unsigned int indexOffset;         // Offset in the index buffer
+        float textureRepeatX;             // Texture repeat factor in X
+        float textureRepeatY;             // Texture repeat factor in Y
     };
 
     std::vector<float> vertices;          // Vertex data (positions + texture coords)
@@ -89,7 +91,7 @@ private:
         };
 
         // Calculate offsets and counts for this face
-        Face face = { textureID, static_cast<unsigned int>(faceIndices.size()), static_cast<unsigned int>(indices.size()) };
+        Face face = { textureID, static_cast<unsigned int>(faceIndices.size()), static_cast<unsigned int>(indices.size()), 1.0f, 1.0f };
         faces.push_back(face);
 
         // Append indices
@@ -141,7 +143,6 @@ public:
         modelMatrix = glm::rotate(modelMatrix, glm::radians(angle), axis);
     }
 
-
     void Draw(Shader& shader) {
         shader.Use();
         shader.setMat4("model", modelMatrix);
@@ -150,6 +151,11 @@ public:
 
         for (const auto& face : faces) {
             glBindTexture(GL_TEXTURE_2D, face.textureID);
+
+            // Set the texture repeat factors
+            shader.setFloat("textureRepeatX", face.textureRepeatX);
+            shader.setFloat("textureRepeatY", face.textureRepeatY);
+
             glDrawElements(GL_TRIANGLES, face.indexCount, GL_UNSIGNED_INT, (void*)(face.indexOffset * sizeof(unsigned int)));
         }
 
@@ -162,11 +168,12 @@ public:
         }
     }
 
-    ~DoorFrame() {
-        glDeleteVertexArrays(1, &VAO);
-        glDeleteBuffers(1, &VBO);
-        glDeleteBuffers(1, &EBO);
+    void SetTextureRepeat(float xRepeat, float yRepeat, int faceIndex) {
+        if (faceIndex >= 0 && faceIndex < static_cast<int>(faces.size())) {
+            faces[faceIndex].textureRepeatX = xRepeat;
+            faces[faceIndex].textureRepeatY = yRepeat;
+        }
     }
 };
 
-#endif
+#endif // DOORFRAME_H

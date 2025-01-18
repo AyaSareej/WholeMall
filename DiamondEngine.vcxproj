@@ -177,6 +177,7 @@
     <ClInclude Include="LiftRoomDoor.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="ShamCenter.h" />
     <ClInclude Include="Table.h" />
     <ClInclude Include="TeddyBear.h" />
     <ClInclude Include="Texture.h" />
@@ -185,6 +186,7 @@
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="ToyStore.h" />
+    <ClInclude Include="Trapeozid.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
     <ClInclude Include="WallHole.h" />

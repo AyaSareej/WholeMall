@@ -7,7 +7,7 @@
 #include <stb_image.h>
 #include "Shader.h"
 
-
+#include "Trapeozid.h"
 #include "Sphere.h"
 #include "Cuboid.h"4
 #include "Door.h"
@@ -19,12 +19,15 @@
 #include "Arch.h"
 #include "LiftRoomDoor.h" // elec door
 ///
+#include "ShamCenter.h"
+//
 #include "TeddyBear.h"
 #include "CarToy.h"
 ///
 #include "Cylinder.h"
 #include "Camera.h"
 #include "TextureLoader.h"
+#include "Texture.h"
 #include "ToyStore.h"
 #include "Table.h"
 #include <iostream>
@@ -65,6 +68,9 @@ bool keys[1024];
 GLfloat SceneRotateY = 0.0f;
 GLfloat SceneRotateX = 0.0f;
 bool onPlanet = false;
+
+// Camera Speed
+int camera_speed = 1;
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
@@ -180,6 +186,7 @@ int main() {
 	glEnable(GL_MULTISAMPLE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	//Shader
 	Shader SimpleShader("simpleVS.vs", "simpleFS.fs");
@@ -302,9 +309,9 @@ int main() {
 	GLfloat camX = 10.0f;
 	GLfloat camZ = 10.0f;
 
-	camera.Position = glm::vec3(200.0f, 50.0f, 0.0f);
-	camera.Yaw = 180.0f;
-	camera.Pitch = -10.0f;
+	camera.Position = glm::vec3(0.0f, 2000.0f, 0.0f);
+	camera.Yaw = 0.0f;
+	camera.Pitch = 0.0f;
 	camera.ProcessMouseMovement(xoff, yoff);
 	camera.FreeCam = false;
 	onFreeCam = true;
@@ -341,16 +348,26 @@ int main() {
 	unsigned int t_nose = loadTexture("resources/1x/nose.png");
 	unsigned int t_leg = loadTexture("resources/1x/legt.png");
 	unsigned int t_head2 = loadTexture("resources/1x/head2.png");
+	
+	/////
+	unsigned int t_greyIron = loadTexture("resources/street/iron.jpg");
+	unsigned int t_WhiteFloor = loadTexture("resources/floors/wf.jpg");
+	unsigned int t_glass = loadTexture("resources/walls/glass3.png");
 
 	/////////////  Buildings textures   //////////////
 	unsigned int t_building1 = loadTexture("resources/buildings/photo_7_2025-01-16_15-20-24.jpg");
-	//unsigned int t_building2 = loadTexture("resources/buildings/photo_5_2025-01-16_15-20-24.jpg");
-	//unsigned int t_building3 = loadTexture("resources/buildings/photo_12_2025-01-16_15-20-24.jpg");
+	unsigned int t_building2 = loadTexture("resources/buildings/photo_2_2025-01-16_16-01-39.jpg");
+	unsigned int t_building3 = loadTexture("resources/buildings/photo_1_2025-01-16_16-01-39.jpg");
 	unsigned int t_building4 = loadTexture("resources/buildings/photo_6_2025-01-16_15-20-24.jpg");
 	unsigned int t_building5 = loadTexture("resources/buildings/photo_8_2025-01-16_15-20-24.jpg");
-	//unsigned int t_building6 = loadTexture("resources/buildings/photo_7_2025-01-16_15-20-24.jpg");
+	unsigned int t_building6 = loadTexture("resources/buildings/photo_9_2025-01-16_15-20-24.jpg");
+	
+	unsigned int t_buildingBlack = loadTexture("resources/buildings/photo_13_2025-01-16_15-47-45.jpg");
+	
+	unsigned int t_centerBuilding = loadTexture("resources/walls/ceanaterwall.jpg");
 	
 	unsigned int t_sidewalk1 = loadTexture("resources/street/sidewalk.jpg");
+	unsigned int t_sidewalk2 = loadTexture("resources/street/sidewalkcenter.jpg");
 	
 	unsigned int t_street1 = loadTexture("resources/street/street.jpg");
 	unsigned int t_zeft = loadTexture("resources/street/zeft.jpg");
@@ -372,7 +389,8 @@ int main() {
 
 	
 	//the ground GENERATION
-	Cuboid terrain(5500.5f, 10.0f, 3000.0f);
+	Cuboid terrain(5500.5f, 10.0f, 7000.0f);
+	terrain.SetPosition(0, -5, 0);
 	terrain.SetTextureRepeat(10.0f, 6.0f);
 	for (int i = 0; i < 6; i++) {
 			terrain.SetTextureForFace(i, t_zeft);
@@ -383,52 +401,155 @@ int main() {
 	// first group
 
 	Cuboid building(500, 1000, 700);
-	building.SetPosition(-2500, 510, 0);
+	building.SetPosition(-3650, 510, 0);
+	building.SetRotation(0, 0, 180);
 
 	Cuboid building2(500, 800, 700);
-	building2.SetPosition(-2500, 410, 750);	
+	building2.SetPosition(-3650, 410, 750);	
 	building2.SetRotation(0, 0, 180);
+	
+	Cuboid building10(500, 800, 700);
+	building10.SetPosition(-3650, 410, 1500);	
+	building10.SetRotation(0, 0, 180);
+
+	Cuboid building12(500, 1200, 1000);
+	building12.SetPosition(-3650, 600, 1500 + 900);
+	building12.SetRotation(0, 0, 180);
 
 	Cuboid building3(500, 850, 700);
-	building3.SetPosition(-2500, 435, -750);
+	building3.SetPosition(-3650, 435, -750);
+	building3.SetRotation(0, 0, 180);
+
+	Cuboid building8(500, 850, 700);
+	building8.SetPosition(-3650, 425, -1500);
+	building8.SetRotation(0, 0, 180);	
+	
+	Cuboid building11(500, 1000, 700);
+	building11.SetPosition(-3650, 500, -1500 -750);
+	building11.SetRotation(0, 0, 180);
+
+
+	Cuboid sidewalk2(300, 15, 8000);
+	sidewalk2.SetTextureRepeat(2, 20);
+	sidewalk2.SetPosition(-3250, 7.5f, 0);
+
 	
 	// secound group
 	
+	Cuboid building7(500, 1300, 900);
+	building7.SetPosition(1150, 650, -3750);
+	building7.SetRotation(0, 90, 180);
+
 	Cuboid building4(500, 1000, 700);
-	building4.SetPosition(2500, 510, 0);
-	building4.SetRotation(0, 0, 180);
+	building4.SetPosition(300, 510, -3750);
+	building4.SetRotation(0, 90, 180);
 
 	Cuboid building5(700, 1300, 800);
-	building5.SetPosition(2600, 650, 800);
-	building5.SetRotation(0, 0, 180);
+	building5.SetPosition(-500, 650, -3850);
+	building5.SetRotation(0, 90, 180);
 
 	Cuboid building6(500, 850, 700);
-	building6.SetPosition(2500, 435, -750);
+	building6.SetPosition(-1300, 435, -3750);
+	building6.SetRotation(0, 90, 180);
 
-	Cuboid sidewalk(300, 15, 3000);
-	sidewalk.SetTextureRepeat(2, 10);
-	sidewalk.SetPosition(2100, 7.5f, 0);
+
+	Cuboid sidewalk(300, 15, 5000); // behind the building
+	sidewalk.SetTextureRepeat(2, 20);
+	sidewalk.SetPosition(2950, -7.5f, 1300);
+
+	Cuboid sidewalk_south2(300, 15, 4300); // near the buildings on left
+	sidewalk_south2.SetTextureRepeat(2, 10);
+	sidewalk_south2.SetPosition(500, -7.5f, -3350);
+	sidewalk_south2.SetRotation(0, 90, 0);
+
+	/// center sidewalks //////////
+
+	Cuboid sidewalk3(500, 15, 5000); // near the center behind
+	sidewalk3.SetTextureRepeat(2, 8);
+	sidewalk3.SetPosition(1850, -7.5f, 1000);
+
+	Cuboid sidewalk_south(500, 15, 4400); // near the center left
+	sidewalk_south.SetTextureRepeat(2, 6);
+	sidewalk_south.SetPosition(500, -7.5f, -2250);
+	sidewalk_south.SetRotation(0, 90, 0);
+
+
+	Cuboid sidewalk4(700, 15, 6500); // near the center front
+	sidewalk4.SetTextureRepeat(2, 16);
+	sidewalk4.SetPosition(-2050, -7.5f, 1000 - 250);
 	
-	Cuboid sidewalk2(300, 15, 3000);
-	sidewalk2.SetTextureRepeat(2, 10);
-	sidewalk2.SetPosition(-2100, 7.5f, 0);
+	Cuboid sidewalkFB(750, 15, 800); // near the center front bb
+	sidewalkFB.SetTextureRepeat(2, 1);
+	sidewalkFB.SetPosition(-2025, -7.5f,  -3600);
+	
+	/////
+	/////// Street ///////////
+	Cuboid streetL(700,15,8000); // front
+	streetL.SetPosition(-2750, -5, -0);
+	streetL.SetTextureRepeat(1,2);	
+	
+	Cuboid streetR(700,15,3000); // behind
+	streetR.SetPosition(2450, -5, 0);
+	streetR.SetTextureRepeat(1,2);
+
+	Cuboid street_south(700, 15, 5400);
+	street_south.SetPosition(275, -5, -2850);
+	street_south.SetTextureRepeat(1, 2);
+	street_south.SetRotation(0, 90, 0);
 
 	////// Main Sham Center Building ////////////
-	Cuboid sham_center(2000, 1000, 1000);
-	sham_center.SetPosition(0, 500, 0);
 
+	Cuboid sham_center(1595, 1000, 2000);
+	sham_center.SetPosition(0, 500, 0);
+	sham_center.SetTextureRepeat(1, 1);
+
+	ShamCenter sham(3200, 1100, 4000, glm::vec3(0, 0, 0), t_centerBuilding, t_greyIron, t_buildingBlack, t_WhiteFloor,t_glass);
+	
+	DoorFrame underCenter(glm::vec3(100, -50/2, -800), glm::vec3(3050  , 4000 / 2 ,50), glm::vec3( 300, 4000 / 3 / 2 - 100,50), 1000) ;
+	DoorFrame underCenterD(glm::vec3(0, -15, 0), glm::vec3(3440 , 4000 ,20), glm::vec3( 3200 - 300, 4000 - 300,20), 500) ;
+	underCenter.Rotate(90, glm::vec3(1,0,0));
+	underCenterD.Rotate(90, glm::vec3(1,0,0));
+
+	Cuboid underCenterPart2(3050, 4000/2 - 200, 50);
+	underCenterPart2.SetPosition(100,-50/2,1100);
+	underCenterPart2.SetRotation(90, 0, 0);
+	underCenterPart2.SetTextureRepeat(5, 5);
 	//
 	for (int i = 0; i < 6; i++) {
-		building.SetTextureForFace(i, t_caroo_fabric);
-		building2.SetTextureForFace(i, t_building1);
-		building3.SetTextureForFace(i, t_building1);
+		building.SetTextureForFace(i, t_building1);
+		building2.SetTextureForFace(i, t_building2);
+		building3.SetTextureForFace(i, t_building3);
 		building4.SetTextureForFace(i, t_building4);
 		building5.SetTextureForFace(i, t_building5);
-		building6.SetTextureForFace(i, t_red);
-		sham_center.SetTextureForFace(i, t_blue);
+		building6.SetTextureForFace(i, t_building6);
+		building7.SetTextureForFace(i, t_building1);
+		building8.SetTextureForFace(i, t_building6);
+		building10.SetTextureForFace(i, t_building3);
+		building11.SetTextureForFace(i, t_building1);
+		building12.SetTextureForFace(i, t_building4);
+		underCenter.SetTextureRepeat(5, 10, i);
 
+		sham_center.SetTextureForFace(i, t_centerBuilding);
+		underCenter.SetFaceTexture(i, t_WhiteFloor);
+		underCenterD.SetFaceTexture(i, t_street1);
+		underCenterPart2.SetTextureForFace(i, t_WhiteFloor);
+
+		streetL.SetTextureForFace(i, t_street1);
+		streetR.SetTextureForFace(i, t_street1);
+
+		street_south.SetTextureForFace(i, t_street1);
+		
 		sidewalk.SetTextureForFace(i, t_sidewalk1);
 		sidewalk2.SetTextureForFace(i, t_sidewalk1);
+
+		sidewalk4.SetTextureForFace(i, t_sidewalk2);
+		sidewalk3.SetTextureForFace(i, t_sidewalk2);
+		
+		sidewalkFB.SetTextureForFace(i, t_sidewalk1);
+
+		sidewalk_south.SetTextureForFace(i, t_sidewalk2);
+		sidewalk_south2.SetTextureForFace(i, t_sidewalk1);
+
 	}	
 	
 
@@ -468,7 +589,7 @@ int main() {
 
 	// Create a ToyStore instance
 	ToyStore myToyStore(500.0f, 300.0f, 400.0f,t_roof, t_wallToysStore, t_floorToysStore);
-	myToyStore.SetPosition(100.0f, 150.0f, 500.0f);
+	myToyStore.SetPosition(-500.0f, 200.0f, 120.0f);
 		
 	
 	ToyStore my2ToyStore(300.0f, 300.0f, 400.0f, t_roof, t_wallToysStore, t_floorToysStore);
@@ -523,7 +644,6 @@ int main() {
 
 	my2ToyStore.AddShelf(Cuboid(50, 10, 10), glm::vec3(0, 10, 0));
 
-
 	//teddy1.SetScale(glm::vec3(2.0f, 2.0f, 2.0f));
 	// ground
 	//DoorFrame frameRoomA(
@@ -545,7 +665,10 @@ int main() {
 	/*
 	* Models
 	*/
-	
+	Model carModel("resources/3d_models/plant/potted_plant.obj");
+	glActiveTexture(GL_TEXTURE0); // Reusing the same texture unit for each model mesh.
+	unsigned int image_sampler_loc = glGetUniformLocation(SimpleShader.ID, "image");
+	glUniform1i(image_sampler_loc, 0);
 	//Model carpet("C:/Aya/Opengl/resources/3d_models/carpet_carpet/scene.gltf");
 	////
 		/*
@@ -559,8 +682,8 @@ int main() {
 	//glfwSetWindowUserPointer(window, &appState);
 
 
-
-	///////////////////// RENDERING LOOP /////////////
+	///////////////////////////////////////////////////////
+	///////////////////// RENDERING LOOP //////////////////
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -617,18 +740,24 @@ int main() {
 		GLuint lightPosLocation = glGetUniformLocation(SimpleShader.ID, "lightPos");
 		glUniform3f(lightPosLocation, lightPosition.x, lightPosition.y, lightPosition.z);
 
-
+		carModel.Draw(SimpleShader);
 
 		////////////////   TERRAIN   ///////////////
-		glm::mat4 terrainModel = glm::mat4(1.0f);
-		terrainModel = glm::translate(terrainModel, glm::vec3(0.0f, 0.0f, 0.0f)); // Center the cuboid at the origin
-		SimpleShader.setMat4("model", terrainModel);
-		terrain.Draw(SimpleShader);
+		//glm::mat4 terrainModel = glm::mat4(1.0f);
+		//terrainModel = glm::translate(terrainModel, glm::vec3(0.0f, 0.0f, 0.0f)); // Center the cuboid at the origin
+		//SimpleShader.setMat4("model", terrainModel);
+		//terrain.Draw(SimpleShader);
 		SimpleShader.Use();
 
 		////// Main Sham Center Building ////////////
 		
-		sham_center.Draw(SimpleShader);
+		//sham_center.Draw(SimpleShader);
+		sham.Draw(SimpleShader);
+		underCenter.Draw(SimpleShader);
+		underCenterD.Draw(SimpleShader);
+		underCenterPart2.Draw(SimpleShader);
+
+
 		//////////////////     Buildings    ////////////
 		building.Draw(SimpleShader);
 		building2.Draw(SimpleShader);
@@ -636,12 +765,28 @@ int main() {
 		building4.Draw(SimpleShader);
 		building5.Draw(SimpleShader);
 		building6.Draw(SimpleShader);
+		building7.Draw(SimpleShader);
+		building8.Draw(SimpleShader);
+		building10.Draw(SimpleShader);
+		building11.Draw(SimpleShader);
+		building12.Draw(SimpleShader);
 		
 		// streets
-		 
+		streetL.Draw(SimpleShader);
+		streetR.Draw(SimpleShader);
+
+		street_south.Draw(SimpleShader);
+
 		//// sidewalk ///
 		sidewalk.Draw(SimpleShader);
+		sidewalk4.Draw(SimpleShader);
+		sidewalkFB.Draw(SimpleShader);
+
 		sidewalk2.Draw(SimpleShader);
+		sidewalk3.Draw(SimpleShader);
+
+		sidewalk_south.Draw(SimpleShader);
+		sidewalk_south2.Draw(SimpleShader);
 		//frameKitchenWindow.Rotate(90.0f, glm::vec3(0.0f, 1.0f, 0.0f));
 		//
 
@@ -695,6 +840,27 @@ int main() {
 		glDepthFunc(GL_LESS);
 		/* DRAW SKYBOX */
 
+		///////////////////////////
+
+		//for (unsigned int i = 0; i < carModel.num_meshes; ++i)
+		//{
+		//	glBindTexture(GL_TEXTURE_2D, carModel.mesh_list[i].tex_handle); // Bind texture for the current mesh.	
+
+		//	glBindVertexArray(carModel.mesh_list[i].VAO);
+		//	glDrawElements(GL_TRIANGLES, (GLsizei)carModel.mesh_list[i].vert_indices.size(), GL_UNSIGNED_INT, 0);
+		//	glBindVertexArray(0);
+		//}
+		//for (unsigned int i = 0; i < carModel.num_meshes; ++i)
+		//{
+		//	glBindTexture(GL_TEXTURE_2D, black_smith.mesh_list[i].tex_handle); // Bind texture for the current mesh.	
+
+		//	glBindVertexArray(black_smith.mesh_list[i].VAO);
+		//	glDrawElements(GL_TRIANGLES, (GLsizei)black_smith.mesh_list[i].vert_indices.size(), GL_UNSIGNED_INT, 0);
+		//	glBindVertexArray(0);
+		//}
+
+
+
 		// TRACKING 
 		view = camera.GetViewMatrix();
 
@@ -720,17 +886,23 @@ void processInput(GLFWwindow* window)
 		glfwSetWindowShouldClose(window, true);
 
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		camera.ProcessKeyboard(FORWARD, deltaTime);
+		camera.ProcessKeyboard(FORWARD, deltaTime * camera_speed);
+
+	if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS)
+		camera_speed = 3;
+
+	if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)
+		camera_speed = 1;
 
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		camera.ProcessKeyboard(BACKWARD, deltaTime);
+		camera.ProcessKeyboard(BACKWARD, deltaTime * camera_speed);
 
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-		camera.ProcessKeyboard(LEFT, deltaTime);
+		camera.ProcessKeyboard(LEFT, deltaTime * camera_speed);
 
 	
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-		camera.ProcessKeyboard(RIGHT, deltaTime);
+		camera.ProcessKeyboard(RIGHT, deltaTime * camera_speed);
 	
 	if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS) {
 		std::cout << "Key Pressed L: " << std::endl;

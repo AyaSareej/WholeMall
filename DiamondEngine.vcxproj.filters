@@ -145,6 +145,12 @@
     <ClInclude Include="Table.h">
       <Filter>Header Files\objects</Filter>
     </ClInclude>
+    <ClInclude Include="ShamCenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trapeozid.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="simpleVS.vs">

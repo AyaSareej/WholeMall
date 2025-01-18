@@ -26,6 +26,8 @@ private:
     glm::vec3 rotation;      // Rotation of the cylinder
     float radius, height;    // Radius and height of the cylinder
     int sectors;             // Number of sectors (sides)
+    float textureRepeatX;    // Texture repeat factor in X
+    float textureRepeatY;    // Texture repeat factor in Y
 
 public:
     // Destructor to clean up OpenGL resources
@@ -43,7 +45,7 @@ public:
 
     // Constructor to initialize the cylinder dimensions and setup buffers
     Cylinder(float radius, float height, int sectors)
-        : radius(radius), height(height), sectors(sectors), position(0.0f), rotation(0.0f), useTexture(false), faceColor(1.0f, 1.0f, 1.0f, 1.0f) {
+        : radius(radius), height(height), sectors(sectors), position(0.0f), rotation(0.0f), useTexture(false), faceColor(1.0f, 1.0f, 1.0f, 1.0f), textureRepeatX(1.0f), textureRepeatY(1.0f), transparency(1.0f) {
         generateVertices();
         setupBuffers();
     }
@@ -56,7 +58,6 @@ public:
     void SetPosition(float x, float y, float z) {
         position = glm::vec3(x, y, z);
     }
-
 
     // Set the rotation of the cylinder
     void SetRotation(float x, float y, float z) {
@@ -75,6 +76,15 @@ public:
         useTexture = true;
     }
 
+    // Set the texture repeat factors
+    void SetTextureRepeat(float xRepeat, float yRepeat) {
+        textureRepeatX = xRepeat;
+        textureRepeatY = yRepeat;
+    }
+    void SetTransparency(float alpha) {
+        transparency = alpha;
+        faceColor.a = alpha;
+    }
     // Draw the cylinder
     void Draw(Shader& shader) {
         shader.Use(); // Use the shader program
@@ -94,17 +104,26 @@ public:
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, texture);
             shader.setInt("ourTexture", 0);
+            shader.setFloat("textureRepeatX", textureRepeatX);
+            shader.setFloat("textureRepeatY", textureRepeatY);
         }
         else {
             shader.setVec4("faceColor", faceColor);
         }
 
+        // Enable blending
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glBindVertexArray(VAO);
+
         glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
-
+        glDisable(GL_BLEND);
         glBindVertexArray(0);
-    }
 
+    }
 private:
+    float transparency;
+
     // Generate vertices and indices for the cylinder
     void generateVertices() {
         float halfHeight = height / 2.0f;

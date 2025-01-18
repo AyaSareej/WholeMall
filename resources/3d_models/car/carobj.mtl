@@ -1,0 +1,42 @@
+# Blender 3.4.1 MTL File: 'None'
+# www.blender.org
+
+newmtl Materiais
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Material.001_baseColor.png
+
+newmtl Material.001
+Ns 63.999992
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Material.001_baseColor.png
+
+newmtl farois_3
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 1.404150 0.215959 0.165815
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Material.001_baseColor.png
+
+newmtl farois_f
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 2.500000 2.498795 0.191948
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Material.001_baseColor.png
